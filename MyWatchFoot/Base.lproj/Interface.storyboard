@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13507"/>
+    </dependencies>
+    <scenes>
+        <!--fond-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller backgroundImage="fond" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="MyWatchFoot" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="MyFoot" id="f0Y-bs-5nD"/>
+                        <button width="1" alignment="left" title="Se connecter" id="yyn-DG-t0x">
+                            <connections>
+                                <action selector="ConnecterButton" destination="AgC-eL-Hgc" id="v5X-jo-zgw"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="S'inscrire" id="EdW-lO-tUm">
+                            <connections>
+                                <action selector="InscriptionButton" destination="AgC-eL-Hgc" id="jN8-js-KC9"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--InscripController-->
+        <scene sceneID="mPG-JS-TbS">
+            <objects>
+                <controller identifier="InscripController" id="H3k-Dh-CIi" customClass="InscripController" customModule="MyWatchFoot_Extension">
+                    <items>
+                        <button width="1" alignment="left" title="Login" id="9lT-xN-oaI">
+                            <connections>
+                                <action selector="LoginButton" destination="H3k-Dh-CIi" id="jMt-f6-GLg"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Mot de passe" id="yuU-Ma-Lwh">
+                            <connections>
+                                <action selector="PasswordButton" destination="H3k-Dh-CIi" id="TKO-qo-izL"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="center" verticalAlignment="center" title="OK" id="EYW-bc-BWB">
+                            <connections>
+                                <action selector="OKButton" destination="H3k-Dh-CIi" id="QmX-77-qQx"/>
+                            </connections>
+                        </button>
+                        <label alignment="left" text="Label" id="6JJ-Cw-SFy"/>
+                    </items>
+                    <connections>
+                        <outlet property="lblLog" destination="6JJ-Cw-SFy" id="n5q-GW-s2r"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="508" y="344.5"/>
+        </scene>
+        <!--CountryController-->
+        <scene sceneID="hXH-j1-ehO">
+            <objects>
+                <controller identifier="CountryController" id="2EQ-jA-Iu7" customClass="CountryController" customModule="MyWatchFoot_Extension">
+                    <items>
+                        <label alignment="center" text="Selection équipe" textAlignment="center" id="9vG-yg-6Ln"/>
+                        <button width="1" alignment="left" backgroundImage="France" id="7zl-4L-V86">
+                            <connections>
+                                <action selector="BtnFrance" destination="2EQ-jA-Iu7" id="Yjt-A7-32B"/>
+                            </connections>
+                        </button>
+                        <separator alignment="left" id="vD8-78-Vav"/>
+                        <button width="1" alignment="left" backgroundImage="Germany" id="v80-MO-Hqi">
+                            <connections>
+                                <action selector="BtnGermany" destination="2EQ-jA-Iu7" id="mgy-XY-m8U"/>
+                            </connections>
+                        </button>
+                        <separator alignment="left" id="87h-8D-Ske"/>
+                        <button width="1" alignment="left" backgroundImage="Italy" id="WZm-FA-E7h">
+                            <connections>
+                                <action selector="BtnItaly" destination="2EQ-jA-Iu7" id="jRO-zc-Ctr"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="btnFranceAlpha" destination="7zl-4L-V86" id="eye-XU-uZz"/>
+                        <outlet property="btnGermanyAlpha" destination="v80-MO-Hqi" id="Tte-6J-RYQ"/>
+                        <outlet property="btnItalyAlpha" destination="WZm-FA-E7h" id="JLt-1j-mS6"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="774" y="345"/>
+        </scene>
+        <!--LoadCompositionController-->
+        <scene sceneID="O9G-tB-eXQ">
+            <objects>
+                <controller identifier="LoadCompositionController" id="AuJ-c4-FSC" customClass="LoadCompositionController" customModule="MyWatchFoot_Extension">
+                    <items>
+                        <label alignment="left" text="Compo en cours.." id="hdr-iG-FWC"/>
+                        <imageView alignment="left" image="terrain" id="SSZ-Hx-ALi"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1049" y="269"/>
+        </scene>
+        <!--PlayersController-->
+        <scene sceneID="6Lo-1w-eSm">
+            <objects>
+                <controller identifier="PlayersController" id="jw2-MN-93b" customClass="PlayersController" customModule="MyWatchFoot_Extension">
+                    <items>
+                        <label alignment="center" text="Choisir joueur" textAlignment="center" id="vFS-FM-Uar"/>
+                        <separator alignment="left" id="vZ9-1m-Svz"/>
+                        <table alignment="left" id="9hE-5p-4t2">
+                            <items>
+                                <tableRow identifier="mySuperRow" id="WlM-iN-EBg" customClass="PlayerRowController" customModule="MyWatchFoot_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="N3U-jP-0G8">
+                                        <items>
+                                            <label height="104" alignment="center" text="Joueur" id="6aj-jh-vxI">
+                                                <color key="textColor" red="0.84025265439999997" green="0.59049138030000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="playerLabel" destination="6aj-jh-vxI" id="h1l-wQ-SDd"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="playerTable" destination="9hE-5p-4t2" id="3mP-6n-j62"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1349" y="269"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="MyWatchFoot" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>
